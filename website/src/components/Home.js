@@ -1,0 +1,36 @@
+import React from 'react';
+import { Grid, FormControl, TextField } from '@material-ui/core';
+
+const Home = () => {
+    return(
+        <Grid container justify="center">
+            <Grid item xs={10}>
+                <h1>Weclome</h1>
+            </Grid>
+            
+            <Grid item xs={10}>
+                <FormControl fullWidth margin="normal">
+                    <TextField
+                        label="Email"
+                        type="Email"
+                        variant="outlined"
+                    />
+                </FormControl>
+                
+            </Grid>
+            <Grid item xs={10}>
+                <FormControl fullWidth margin="normal">
+                    <TextField
+                        fullWidth
+                        label="Password"
+                        type="password"
+                        variant="outlined"
+                    />
+                </FormControl>
+            </Grid>
+            
+        </Grid>
+    )
+}
+
+export default Home;
