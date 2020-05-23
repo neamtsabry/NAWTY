@@ -3,8 +3,6 @@ import { Map, Marker, TileLayer, Popup } from 'react-leaflet';
 import { geolocated } from "react-geolocated";
 import L from 'leaflet';
 
-import SearchBar from './SearchBar';
-
 import IconBlue from '../images/icon1.svg';
 import IconRed from '../images/icon2.svg';
 import IconHome from '../images/home.svg';
@@ -69,7 +67,6 @@ class MapView extends Component{
         )
         return (
             <div>
-                <SearchBar />
                 <Map className="map" center={position} zoom={this.state.zoom}>
                     <TileLayer
                         attribution='&amp;copy <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'

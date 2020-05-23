@@ -3,13 +3,15 @@ import { Link } from 'react-router-dom';
 import { makeStyles } from '@material-ui/core/styles';
 import BottomNavigation from '@material-ui/core/BottomNavigation';
 import BottomNavigationAction from '@material-ui/core/BottomNavigationAction';
+
 import HomeIcon from '@material-ui/icons/Home';
 import MapIcon from '@material-ui/icons/Map';
+import SearchIcon from '@material-ui/icons/Search';
 
 const useStyles = makeStyles({
   root: {
     width: "100%",
-    backgroundColor: "#38cf49"
+    backgroundColor: "#d0f2d3"
   },
 });
 
@@ -28,6 +30,7 @@ export default function Navbar() {
     >
       <BottomNavigationAction component={Link} to="/" label="Home" icon={<HomeIcon />} />
       <BottomNavigationAction component={Link} to="/map" label="Map" icon={<MapIcon />} />
+      <BottomNavigationAction component={Link} to="/search" label="Search" icon={<SearchIcon />} />
     </BottomNavigation>
   );
 }
