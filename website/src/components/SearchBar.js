@@ -6,6 +6,7 @@ const SearchBar = () => {
     return(
         <FormControl fullWidth margin="normal">
             <FilledInput
+                autoComplete="happy"
                 placeholder="Search for Park"
                 endAdornment={
                     <InputAdornment position="end">

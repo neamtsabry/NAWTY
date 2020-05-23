@@ -30,7 +30,7 @@ const Home = () => {
             </Grid>
             
             <Grid item xs={10}>
-                <Button component={Link} to="/map" variant="outlined" color="primary">
+                <Button component={Link} to="/parks/map" variant="outlined" color="primary">
                     Login
                 </Button>
             </Grid>
