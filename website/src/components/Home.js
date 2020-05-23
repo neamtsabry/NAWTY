@@ -22,7 +22,6 @@ const Home = () => {
             <Grid item xs={10}>
                 <FormControl fullWidth margin="normal">
                     <TextField
-                        fullWidth
                         label="Password"
                         type="password"
                         variant="outlined"
