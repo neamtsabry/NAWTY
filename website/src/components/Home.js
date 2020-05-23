@@ -1,5 +1,6 @@
 import React from 'react';
-import { Grid, FormControl, TextField } from '@material-ui/core';
+import { Link } from 'react-router-dom';
+import { Grid, FormControl, TextField, Button } from '@material-ui/core';
 
 const Home = () => {
     return(
@@ -29,6 +30,11 @@ const Home = () => {
                 </FormControl>
             </Grid>
             
+            <Grid item xs={10}>
+                <Button component={Link} to="/map" variant="outlined" color="primary">
+                    Login
+                </Button>
+            </Grid>
         </Grid>
     )
 }
