@@ -19,7 +19,7 @@ const Home = () => {
         <div className={classes.root}>
             <Grid container justify="center" >
                 <Grid item xs={10}>
-                    <h1 className={classes.marginTop}>Weclome</h1>
+                    <h1 className={classes.marginTop}>Welcome</h1>
                 </Grid>
                 
                 <Grid item xs={10}>
