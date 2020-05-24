@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Map, Marker, TileLayer, Popup, ImageOverlay } from 'react-leaflet';
+import { Map, Marker, TileLayer, Popup } from 'react-leaflet';
 import { geolocated } from "react-geolocated";
 import L from 'leaflet';
 
@@ -83,7 +83,7 @@ class MapView extends Component{
                                     {park.amount > 50 ? (
                                         <div>
                                             <strong>It crowded. Try this Parks</strong><br />
-                                            <img src="https://images.unsplash.com/photo-1510521212584-6d33ce4408d1" className="img" />
+                                            <img src="https://images.unsplash.com/photo-1510521212584-6d33ce4408d1" className="img" alt="park"/>
                                         </div>
                                     ) : null} 
                                 </Popup>
