@@ -303,7 +303,7 @@ def check_response_code(resp):
 def Average(lst): 
     return sum(lst) / len(lst) 
 
-pTimes = get_populartimes("AIzaSyCA7Xv4d_q_EfHCY1GknzXN2IGxnH0lqBg","ChIJSYuuSx9awokRyrrOFTGg0GY")['populartimes']
+pTimes = get_populartimes(API_KEY,"ChIJSYuuSx9awokRyrrOFTGg0GY")['populartimes']
 
 for i in pTimes:
     print(i['name'],end=": ")
