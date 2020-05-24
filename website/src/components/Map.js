@@ -39,11 +39,11 @@ class MapView extends Component{
 
     timer() {
         if(this.props.coords){
-            // this.setState({
-            //     lat: this.props.coords.latitude,
-            //     lng: this.props.coords.longitude,
-            //     zoom: 6
-            // })
+            this.setState({
+                lat: this.props.coords.latitude,
+                lng: this.props.coords.longitude,
+                zoom: 12
+            })
             clearInterval(this.intervalId);
         }
     }
