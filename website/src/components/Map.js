@@ -3,6 +3,8 @@ import { Map, Marker, TileLayer, Popup } from 'react-leaflet';
 import { geolocated } from "react-geolocated";
 import L from 'leaflet';
 
+import data from './Data.json';
+
 import IconBlue from '../images/icon1.svg';
 import IconRed from '../images/icon2.svg';
 import IconHome from '../images/home.svg';
@@ -72,16 +74,17 @@ class MapView extends Component{
                         attribution='&amp;copy <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
                         url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
                     />
-                    <Marker position={[40.0423477, -100.4082212]} icon={blueIcon}>
-                        <Popup>
-                            10/50
-                        </Popup>
-                    </Marker>
-                    <Marker position={[30.0423477, -100.4082212]} icon={redIcon}>
-                        <Popup>
-                            100/75
-                        </Popup>
-                    </Marker>
+                    {data.map((park, index) => {
+                        return(
+                            <Marker key={index} position={park.coords} icon={park.amount > 50 ? redIcon : blueIcon}>
+                                <Popup>
+                                    {park.name}<br />
+                                    <strong>{park.amount} People</strong>
+                                </Popup>
+                            </Marker>
+                        )
+                    })}
+                    
                     {location}
                 </Map>
             </div>
