@@ -7,6 +7,7 @@ import BottomNavigationAction from '@material-ui/core/BottomNavigationAction';
 import HomeIcon from '@material-ui/icons/Home';
 import MapIcon from '@material-ui/icons/Map';
 import SearchIcon from '@material-ui/icons/Search';
+import AddLocationIcon from '@material-ui/icons/AddLocation';
 
 const useStyles = makeStyles({
   root: {
@@ -31,6 +32,7 @@ export default function Navbar() {
       <BottomNavigationAction component={Link} to="/" label="Home" icon={<HomeIcon />} />
       <BottomNavigationAction component={Link} to="/map" label="Map" icon={<MapIcon />} />
       <BottomNavigationAction component={Link} to="/search" label="Search" icon={<SearchIcon />} />
+      <BottomNavigationAction component={Link} to="/addlocation" label="Add location" icon={<AddLocationIcon />} />
     </BottomNavigation>
   );
 }
