@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Map, Marker, TileLayer, Popup } from 'react-leaflet';
+import { Map, Marker, TileLayer, Popup, ImageOverlay } from 'react-leaflet';
 import { geolocated } from "react-geolocated";
 import L from 'leaflet';
 
@@ -39,11 +39,11 @@ class MapView extends Component{
 
     timer() {
         if(this.props.coords){
-            this.setState({
-                lat: this.props.coords.latitude,
-                lng: this.props.coords.longitude,
-                zoom: 6
-            })
+            // this.setState({
+            //     lat: this.props.coords.latitude,
+            //     lng: this.props.coords.longitude,
+            //     zoom: 6
+            // })
             clearInterval(this.intervalId);
         }
     }
@@ -79,7 +79,13 @@ class MapView extends Component{
                             <Marker key={index} position={park.coords} icon={park.amount > 50 ? redIcon : blueIcon}>
                                 <Popup>
                                     {park.name}<br />
-                                    <strong>{park.amount} People</strong>
+                                    <strong>{park.amount} People</strong><br /><br />
+                                    {park.amount > 50 ? (
+                                        <div>
+                                            <strong>It crowded. Try this Parks</strong><br />
+                                            <img src="https://images.unsplash.com/photo-1510521212584-6d33ce4408d1" className="img" />
+                                        </div>
+                                    ) : null} 
                                 </Popup>
                             </Marker>
                         )
